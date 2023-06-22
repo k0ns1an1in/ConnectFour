@@ -10,4 +10,5 @@ int HorizontalerBot::zug_zeile()
     // zeile evaluieren
 
     // todo feste grenzen des Felds
+    return -1;
 }
