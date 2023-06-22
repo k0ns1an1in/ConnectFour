@@ -1,10 +1,10 @@
 #pragma once
+#include <iostream>
 class GUI
 {
 public:
-    GUI(int* neuesFeld);
-    ~GUI();
+    explicit GUI(int* neuesFeld);
     void spielfeldDrucken() const;
 private:
-    int* m_feld;
+    int* m_spielfeld;
 };
