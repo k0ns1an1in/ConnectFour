@@ -7,7 +7,7 @@ GUI::GUI(int *neuesFeld)
 
 void GUI::spielfeldDrucken() const
 {
-    for(int y=0;y<7;y++)
+    for(int y=0;y<6;y++)
     {
         for(int x=0;x<7;x++)
         {
