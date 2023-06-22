@@ -1,0 +1,18 @@
+ich denke, dass das Feld mit den Indizes wie folgt aufgebaut wird:
+     0   1   2   3   4   5   6
+5    35  36  37  38  39  40  41  
+4    28  29  30  31  32  33  34   
+3    21  22  23  24  25  26  27
+3    14  15  16  17  18  19  20
+1    7   8   9   10  11  12  13
+0    0   1   2   3   4   5   6
+
+Vertikaler Bot:
+schaut von links nach rechts nach der Spalte mit der größten Höhe:
+-Beginn 0|0 => geht so hoch es geht => speichert spaltennummer und maxhöhe, wenn nicht schon max erreicht
+-Next Step (spaltennummer+1)|maxhöhe => geht hier hoch, bis max erreicht => ist es sofort leer maxhöhe gleich, sonst neue maxhöhe
+
+feld = aabbccdd
+*feld = vorlaeufigemaxhoehe 
+
+

@@ -1,6 +1,7 @@
 #pragma once
 
 #include "Bots.hpp"
+#include <iostream>
 
 class VertikalerBot : public Bots
 {
