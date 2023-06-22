@@ -1,16 +1,10 @@
 #include "Verwaltung.h"
 
-Verwaltung::Verwaltung()
+Verwaltung::Verwaltung():m_gui(GUI(&m_spielfeld[0][0]))
 {
-
 }
 
-Verwaltung::~Verwaltung()
+GUI Verwaltung::getGui()
 {
-
-}
-
-int* Verwaltung::spielfeldErstellen()
-{
-
+    return m_gui;
 }
