@@ -12,7 +12,7 @@ int VertikalerBot::zug_zeile()
 {
     // algorithmus
     // todo feste grenzen
-    int zugzeile = -1;
+    int zugzeile = 0;
     int vorlaeufigemaxhoehe;
     int wert = 0;
     int maxhoehe = 0;
