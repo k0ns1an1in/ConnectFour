@@ -109,6 +109,12 @@ build CMakeFiles/ConnectFour.dir/allesmitspieler/ZufallsBot.cpp.obj: CXX_COMPILE
   OBJECT_DIR = CMakeFiles\ConnectFour.dir
   OBJECT_FILE_DIR = CMakeFiles\ConnectFour.dir\allesmitspieler
 
+build CMakeFiles/ConnectFour.dir/allesmitspieler/HorizontalerBot.cpp.obj: CXX_COMPILER__ConnectFour_Debug C$:/ConnectFour/allesmitspieler/HorizontalerBot.cpp || cmake_object_order_depends_target_ConnectFour
+  DEP_FILE = CMakeFiles\ConnectFour.dir\allesmitspieler\HorizontalerBot.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  OBJECT_DIR = CMakeFiles\ConnectFour.dir
+  OBJECT_FILE_DIR = CMakeFiles\ConnectFour.dir\allesmitspieler
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target ConnectFour
@@ -117,7 +123,7 @@ build CMakeFiles/ConnectFour.dir/allesmitspieler/ZufallsBot.cpp.obj: CXX_COMPILE
 #############################################
 # Link the executable ConnectFour.exe
 
-build ConnectFour.exe: CXX_EXECUTABLE_LINKER__ConnectFour_Debug CMakeFiles/ConnectFour.dir/main.cpp.obj CMakeFiles/ConnectFour.dir/GUI.cpp.obj CMakeFiles/ConnectFour.dir/Verwaltung.cpp.obj CMakeFiles/ConnectFour.dir/allesmitspieler/Spieler.cpp.obj CMakeFiles/ConnectFour.dir/allesmitspieler/VertikalerBot.cpp.obj CMakeFiles/ConnectFour.dir/allesmitspieler/Bots.cpp.obj CMakeFiles/ConnectFour.dir/allesmitspieler/Mensch.cpp.obj CMakeFiles/ConnectFour.dir/allesmitspieler/SchlauerBot.cpp.obj CMakeFiles/ConnectFour.dir/allesmitspieler/test.cpp.obj CMakeFiles/ConnectFour.dir/allesmitspieler/ZufallsBot.cpp.obj
+build ConnectFour.exe: CXX_EXECUTABLE_LINKER__ConnectFour_Debug CMakeFiles/ConnectFour.dir/main.cpp.obj CMakeFiles/ConnectFour.dir/GUI.cpp.obj CMakeFiles/ConnectFour.dir/Verwaltung.cpp.obj CMakeFiles/ConnectFour.dir/allesmitspieler/Spieler.cpp.obj CMakeFiles/ConnectFour.dir/allesmitspieler/VertikalerBot.cpp.obj CMakeFiles/ConnectFour.dir/allesmitspieler/Bots.cpp.obj CMakeFiles/ConnectFour.dir/allesmitspieler/Mensch.cpp.obj CMakeFiles/ConnectFour.dir/allesmitspieler/SchlauerBot.cpp.obj CMakeFiles/ConnectFour.dir/allesmitspieler/test.cpp.obj CMakeFiles/ConnectFour.dir/allesmitspieler/ZufallsBot.cpp.obj CMakeFiles/ConnectFour.dir/allesmitspieler/HorizontalerBot.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ConnectFour.dir

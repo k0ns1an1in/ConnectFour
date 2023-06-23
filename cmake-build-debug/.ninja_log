@@ -1,5 +1,20 @@
 # ninja log v5
-16	1328	7091429869332848	CMakeFiles/ConnectFour.dir/GUI.cpp.obj	ecf5914fc9808e6c
-1	1327	7091429869332848	CMakeFiles/ConnectFour.dir/main.cpp.obj	1e6c1e06e3b44b9f
+8	1190	7092164707478136	CMakeFiles/ConnectFour.dir/GUI.cpp.obj	ecf5914fc9808e6c
+12	1454	7092164995403516	CMakeFiles/ConnectFour.dir/main.cpp.obj	1e6c1e06e3b44b9f
 1353	1518	7091429871222648	ConnectFour.exe	354b74c8cec2597
-9	1352	7091429869606157	CMakeFiles/ConnectFour.dir/Verwaltung.cpp.obj	af8bdc2693527d0c
+26	1489	7092164710481322	CMakeFiles/ConnectFour.dir/Verwaltung.cpp.obj	af8bdc2693527d0c
+26	183	7092164982898380	CMakeFiles/ConnectFour.dir/allesmitspieler/Bots.cpp.obj	10dbb9ca03deab89
+1556	1705	7092164998113723	CMakeFiles/ConnectFour.dir/allesmitspieler/SchlauerBot.cpp.obj	101087217f66628f
+19	1556	7092164996560888	CMakeFiles/ConnectFour.dir/allesmitspieler/Spieler.cpp.obj	4fca27924eb3ed4c
+185	1809	7092164999132107	CMakeFiles/ConnectFour.dir/allesmitspieler/VertikalerBot.cpp.obj	60957c0271b52840
+1454	2775	7092165008839592	CMakeFiles/ConnectFour.dir/allesmitspieler/Mensch.cpp.obj	dc686a42b51b37aa
+1809	3097	7092165012056983	CMakeFiles/ConnectFour.dir/allesmitspieler/ZufallsBot.cpp.obj	9cc46e0d878d2981
+3	1043	7092165312345327	CMakeFiles/ConnectFour.dir/allesmitspieler/test.cpp.obj	57af79939926df4e
+6	107	7092165886039396	CMakeFiles/ConnectFour.dir/allesmitspieler/HorizontalerBot.cpp.obj	f4be651c6ed32965
+4	728	7092166245352558	CMakeFiles/ConnectFour.dir/main.cpp.obj	1e6c1e06e3b44b9f
+729	891	7092166246952476	ConnectFour.exe	1f57ee0065c742f7
+5	881	7092167800796472	CMakeFiles/ConnectFour.dir/main.cpp.obj	1e6c1e06e3b44b9f
+13	1172	7092167803729754	CMakeFiles/ConnectFour.dir/Verwaltung.cpp.obj	af8bdc2693527d0c
+1172	1391	7092167805816862	ConnectFour.exe	1f57ee0065c742f7
+5	1331	7092168454898659	CMakeFiles/ConnectFour.dir/GUI.cpp.obj	ecf5914fc9808e6c
+1332	1604	7092168457417190	ConnectFour.exe	1f57ee0065c742f7

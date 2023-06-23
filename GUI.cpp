@@ -15,4 +15,5 @@ void GUI::spielfeldDrucken() const
         }
         cout << endl;
     }
+    cout << endl;
 }

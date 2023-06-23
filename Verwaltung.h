@@ -6,6 +6,8 @@ class Verwaltung
 public:
     Verwaltung(int codeSpieler1, int codeSpieler2);
     GUI getGui();
+    Spieler* getSpieler1();
+    Spieler* getSpieler2();
     int spielsteinEinfuegen(int spalte, int spielerNummer);
     int siegUeberpruefen();
 private:

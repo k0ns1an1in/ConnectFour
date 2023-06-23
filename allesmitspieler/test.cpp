@@ -3,7 +3,7 @@
 #include "ZufallsBot.hpp"
 #include "Spieler.hpp"
 #include <iostream>
-
+/*
 int feld[42] = {0};
 
 int main_für_mich()
@@ -41,3 +41,4 @@ int main_für_mich()
     }
     Spieler *b;
 }
+*/
