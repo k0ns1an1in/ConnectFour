@@ -75,9 +75,9 @@ int Verwaltung::spielsteinEinfuegen(int spalte, int spielerNummer)
 {
     for(int i=5;i>=0;i--)
     {
-        if(m_spielfeld[spalte][i] == 0)
+        if(m_spielfeld[i][spalte] == 0)
         {
-            m_spielfeld[spalte][i] = spielerNummer;
+            m_spielfeld[i][spalte] = spielerNummer;
             return 1;
         }
     }
