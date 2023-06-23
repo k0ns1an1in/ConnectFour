@@ -1,8 +1,9 @@
 #include "SchlauerBot.hpp"
 #include <random>
 #include <iostream>
-SchlauerBot::SchlauerBot(int *feld)
-    : Bots{feld}
+
+SchlauerBot::SchlauerBot(int *feld, int spielernummer)
+    : Bots{feld}, m_spielnummer{spielernummer}
 {
 }
 
@@ -12,7 +13,7 @@ int SchlauerBot::zug_zeile()
     // test
     // todo feste grenzen des Felds
     // muss wissen welche zahl er selbst ist
-    int zahl_von_sich_selbst = 1;
+
     int zahl_gegner = 1;
 
     // drei einsen finden, die nebeneinanderliegen:
@@ -23,7 +24,7 @@ int SchlauerBot::zug_zeile()
     {
         for (int j = 0; j < 7; j++)
         {
-            if (*(m_feld + 7 * i + j) == zahl_von_sich_selbst)
+            if (*(m_feld + 7 * i + j) == m_spielnummer)
             {
                 if (cntr_sichselbst < 3)
                 {
@@ -59,7 +60,7 @@ int SchlauerBot::zug_zeile()
     {
         for (int j = 0; j < 6; j++)
         {
-            if (*(m_feld + 7 * j + i) == zahl_von_sich_selbst)
+            if (*(m_feld + 7 * j + i) == m_spielnummer)
             {
                 if (cntr_sichselbst < 3)
                 {
@@ -69,7 +70,7 @@ int SchlauerBot::zug_zeile()
                 {
                     if (j < 5)
                     {
-                        if (*(m_feld + 7 * i + j + 7) == 0)
+                        if (*(m_feld + 7 * j + i + 7) == 0)
                         {
                             return i;
                         }
