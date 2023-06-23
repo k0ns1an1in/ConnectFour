@@ -1,6 +1,6 @@
 #include <iostream>
 #include "Verwaltung.h"
-int main()
+int mainpfusch()
 {
     Verwaltung device = Verwaltung();
     device.getGui().spielfeldDrucken();

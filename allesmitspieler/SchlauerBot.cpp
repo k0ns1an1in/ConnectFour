@@ -8,6 +8,7 @@ SchlauerBot::SchlauerBot(int *feld)
 int SchlauerBot::zug_zeile()
 {
     // algorithmus erarbeiten
-
+    // test
     // todo feste grenzen des Felds
+    return -1;
 }

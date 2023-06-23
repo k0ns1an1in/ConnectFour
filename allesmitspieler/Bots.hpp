@@ -7,6 +7,6 @@ class Bots : public Spieler
 public:
     Bots(int *feld);
 
-private:
+protected:
     int *m_feld;
 };
