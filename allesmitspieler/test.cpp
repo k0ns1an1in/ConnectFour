@@ -1,4 +1,6 @@
 #include "VertikalerBot.hpp"
+#include "HorizontalerBot.hpp"
+#include "ZufallsBot.hpp"
 #include <iostream>
 
 int feld[42] = {0};
@@ -27,4 +29,13 @@ int main()
     VertikalerBot bot = VertikalerBot(feld);
     int a = bot.zug_zeile();
     std::cout << a << std::endl;
+    HorizontalerBot bot2 = HorizontalerBot(feld);
+    a = bot2.zug_zeile();
+    std::cout << a << std::endl;
+    ZufallsBot bot3 = ZufallsBot(feld);
+    for (size_t i = 0; i < 100; i++)
+    {
+        a = bot3.zug_zeile();
+        std::cout << a << std::endl;
+    }
 }

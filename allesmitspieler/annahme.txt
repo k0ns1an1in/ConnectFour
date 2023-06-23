@@ -15,4 +15,8 @@ schaut von links nach rechts nach der Spalte mit der größten Höhe:
 feld = aabbccdd
 *feld = vorlaeufigemaxhoehe 
 
+Horizontaler Bot:
+schaut von links nach rechts nach der Spalte mit der geringsten Höhe:
+-Beginn 0|0 => ist es nicht 0 weiter nach rechts 
+=> bis 0, dann aus i spalte returnen
 
