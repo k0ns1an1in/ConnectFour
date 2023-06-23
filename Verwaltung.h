@@ -11,7 +11,7 @@ public:
     int spielsteinEinfuegen(int spalte, int spielerNummer);
     int siegUeberpruefen();
 private:
-    int m_spielfeld[6][7] = {0};
+    int m_spielfeld[42] = {0};
     GUI m_gui;
     Spieler* m_spieler1;
     Spieler* m_spieler2;

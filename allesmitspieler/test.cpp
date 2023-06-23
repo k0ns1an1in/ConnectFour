@@ -28,7 +28,7 @@ int main()
     feld[20] = 0;
     feld[5] = 1;
     feld[3] = 1;
-    */
+
     for (int k = 0; k < 6; k++)
     {
         for (int l = 0; l < 7; l++)
