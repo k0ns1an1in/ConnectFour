@@ -4,7 +4,7 @@ class Spieler
 {
 
 public:
-    Spieler(){};
-    virtual int zug_zeile() = 0;
+    Spieler();
+    virtual int zug_zeile();
     virtual ~Spieler() {}
 };

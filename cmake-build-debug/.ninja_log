@@ -1,9 +1,5 @@
 # ninja log v5
-4	625	7091416541414736	CMakeFiles/ConnectFour.dir/GUI.cpp.obj	ecf5914fc9808e6c
-1	1122	7091414573684227	CMakeFiles/ConnectFour.dir/main.cpp.obj	1e6c1e06e3b44b9f
-626	780	7091416542972145	ConnectFour.exe	354b74c8cec2597
-8	1123	7091414573669161	CMakeFiles/ConnectFour.dir/Verwaltung.cpp.obj	af8bdc2693527d0c
-1	1327	7091429869332848	CMakeFiles/ConnectFour.dir/main.cpp.obj	1e6c1e06e3b44b9f
 16	1328	7091429869332848	CMakeFiles/ConnectFour.dir/GUI.cpp.obj	ecf5914fc9808e6c
-9	1352	7091429869606157	CMakeFiles/ConnectFour.dir/Verwaltung.cpp.obj	af8bdc2693527d0c
+1	1327	7091429869332848	CMakeFiles/ConnectFour.dir/main.cpp.obj	1e6c1e06e3b44b9f
 1353	1518	7091429871222648	ConnectFour.exe	354b74c8cec2597
+9	1352	7091429869606157	CMakeFiles/ConnectFour.dir/Verwaltung.cpp.obj	af8bdc2693527d0c

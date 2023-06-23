@@ -67,6 +67,24 @@ build CMakeFiles/ConnectFour.dir/Verwaltung.cpp.obj: CXX_COMPILER__ConnectFour_D
   OBJECT_DIR = CMakeFiles\ConnectFour.dir
   OBJECT_FILE_DIR = CMakeFiles\ConnectFour.dir
 
+build CMakeFiles/ConnectFour.dir/allesmitspieler/Spieler.cpp.obj: CXX_COMPILER__ConnectFour_Debug C$:/ConnectFour/allesmitspieler/Spieler.cpp || cmake_object_order_depends_target_ConnectFour
+  DEP_FILE = CMakeFiles\ConnectFour.dir\allesmitspieler\Spieler.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  OBJECT_DIR = CMakeFiles\ConnectFour.dir
+  OBJECT_FILE_DIR = CMakeFiles\ConnectFour.dir\allesmitspieler
+
+build CMakeFiles/ConnectFour.dir/allesmitspieler/VertikalerBot.cpp.obj: CXX_COMPILER__ConnectFour_Debug C$:/ConnectFour/allesmitspieler/VertikalerBot.cpp || cmake_object_order_depends_target_ConnectFour
+  DEP_FILE = CMakeFiles\ConnectFour.dir\allesmitspieler\VertikalerBot.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  OBJECT_DIR = CMakeFiles\ConnectFour.dir
+  OBJECT_FILE_DIR = CMakeFiles\ConnectFour.dir\allesmitspieler
+
+build CMakeFiles/ConnectFour.dir/allesmitspieler/Bots.cpp.obj: CXX_COMPILER__ConnectFour_Debug C$:/ConnectFour/allesmitspieler/Bots.cpp || cmake_object_order_depends_target_ConnectFour
+  DEP_FILE = CMakeFiles\ConnectFour.dir\allesmitspieler\Bots.cpp.obj.d
+  FLAGS = -g -fdiagnostics-color=always -std=gnu++23
+  OBJECT_DIR = CMakeFiles\ConnectFour.dir
+  OBJECT_FILE_DIR = CMakeFiles\ConnectFour.dir\allesmitspieler
+
 
 # =============================================================================
 # Link build statements for EXECUTABLE target ConnectFour
@@ -75,7 +93,7 @@ build CMakeFiles/ConnectFour.dir/Verwaltung.cpp.obj: CXX_COMPILER__ConnectFour_D
 #############################################
 # Link the executable ConnectFour.exe
 
-build ConnectFour.exe: CXX_EXECUTABLE_LINKER__ConnectFour_Debug CMakeFiles/ConnectFour.dir/main.cpp.obj CMakeFiles/ConnectFour.dir/GUI.cpp.obj CMakeFiles/ConnectFour.dir/Verwaltung.cpp.obj
+build ConnectFour.exe: CXX_EXECUTABLE_LINKER__ConnectFour_Debug CMakeFiles/ConnectFour.dir/main.cpp.obj CMakeFiles/ConnectFour.dir/GUI.cpp.obj CMakeFiles/ConnectFour.dir/Verwaltung.cpp.obj CMakeFiles/ConnectFour.dir/allesmitspieler/Spieler.cpp.obj CMakeFiles/ConnectFour.dir/allesmitspieler/VertikalerBot.cpp.obj CMakeFiles/ConnectFour.dir/allesmitspieler/Bots.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ConnectFour.dir

@@ -3,4 +3,5 @@
 Bots::Bots(int *feld)
     : m_feld{feld}
 {
+
 }
