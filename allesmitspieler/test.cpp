@@ -9,11 +9,12 @@ int feld[42] = {0};
 
 int main()
 {
-    for (int j = 0; j < 22; j = j + 2)
+
+    for (int j = 0; j < 41; j = j + 7)
     {
         feld[j] = 1;
     }
-    for (int i = 1; i < 23; i = i + 2)
+    /*    for (int i = 1; i < 23; i = i + 2)
     {
         feld[i] = 2;
     }
@@ -27,6 +28,7 @@ int main()
     feld[20] = 0;
     feld[5] = 1;
     feld[3] = 1;
+    */
     for (int k = 0; k < 6; k++)
     {
         for (int l = 0; l < 7; l++)

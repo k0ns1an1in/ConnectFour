@@ -25,8 +25,12 @@ int VertikalerBot::zug_zeile()
             wert = *(m_feld + i + vorlaeufigemaxhoehe++ * 7);
         } while (wert != 0 && vorlaeufigemaxhoehe <= 6);
         vorlaeufigemaxhoehe--;
-
-        if (maxhoehe < vorlaeufigemaxhoehe && vorlaeufigemaxhoehe < 6)
+        if (vorlaeufigemaxhoehe >= 6)
+        {
+            zugzeile++;
+            continue;
+        }
+        if (maxhoehe < vorlaeufigemaxhoehe)
         {
             zugzeile = i;
             maxhoehe = vorlaeufigemaxhoehe;
