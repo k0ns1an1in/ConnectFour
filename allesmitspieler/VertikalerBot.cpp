@@ -12,28 +12,25 @@ int VertikalerBot::zug_zeile()
 {
     // algorithmus
     // todo feste grenzen
-
-    int vorlaeufigemaxhoehe = 0;
+    int zugzeile = -1;
+    int vorlaeufigemaxhoehe;
     int wert = 0;
     int maxhoehe = 0;
-    for (int i = 0; i < 6; i++)
+    for (int i = 0; i < 7; i++)
     {
         // i: spaltennummer
-
+        vorlaeufigemaxhoehe = 0;
         do
         {
             wert = *(m_feld + i + vorlaeufigemaxhoehe++ * 7);
-        } while (wert != 0 || vorlaeufigemaxhoehe >= 5);
+        } while (wert != 0 && vorlaeufigemaxhoehe <= 6);
+        vorlaeufigemaxhoehe--;
 
-        if (vorlaeufigemaxhoehe >= 5)
+        if (maxhoehe < vorlaeufigemaxhoehe && vorlaeufigemaxhoehe < 6)
         {
-            vorlaeufigemaxhoehe = maxhoehe;
-        }
-        else
-        {
+            zugzeile = i;
             maxhoehe = vorlaeufigemaxhoehe;
         }
     }
-    cout << maxhoehe << endl;
-    return maxhoehe;
+    return zugzeile;
 }

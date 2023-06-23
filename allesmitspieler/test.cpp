@@ -9,6 +9,11 @@ int main()
     {
         feld[j] = j + 1;
     }
+    feld[22] = 22 + 1;
+    feld[29] = 29 + 1;
+    feld[25] = 25 + 1;
+    feld[32] = 32 + 1;
+    feld[39] = 39 + 1;
 
     for (int k = 0; k < 6; k++)
     {
