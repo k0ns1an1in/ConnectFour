@@ -6,8 +6,7 @@ class Verwaltung
 public:
     Verwaltung(int codeSpieler1, int codeSpieler2);
     GUI getGui();
-    void spielzug(Spieler spieler);
-    void spielsteinEinfuegen(int spalte, int spielerNummer);
+    int spielsteinEinfuegen(int spalte, int spielerNummer);
     int siegUeberpruefen();
 private:
     int m_spielfeld[7][6] = {0};
