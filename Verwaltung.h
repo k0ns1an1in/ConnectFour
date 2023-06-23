@@ -4,14 +4,14 @@
 class Verwaltung
 {
 public:
-    Verwaltung();
+    Verwaltung(int codeSpieler1, int codeSpieler2);
     GUI getGui();
     void spielzug(Spieler spieler);
-    void spielsteinEinfuegen(int spalte);
+    void spielsteinEinfuegen(int spalte, int spielerNummer);
     int siegUeberpruefen();
 private:
     int m_spielfeld[7][6] = {0};
     GUI m_gui;
-    Spieler m_spieler1;
-    Spieler m_spieler2;
+    Spieler* m_spieler1;
+    Spieler* m_spieler2;
 };
