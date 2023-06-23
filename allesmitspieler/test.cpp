@@ -1,23 +1,34 @@
 #include "VertikalerBot.hpp"
 #include "HorizontalerBot.hpp"
 #include "ZufallsBot.hpp"
+#include "SchlauerBot.hpp"
 #include "Spieler.hpp"
 #include <iostream>
 /*
 int feld[42] = {0};
 
-int main_für_mich()
+int main()
 {
-    for (int j = 0; j < 22; j++)
-    {
-        feld[j] = j + 1;
-    }
-    feld[22] = 22 + 1;
-    feld[29] = 29 + 1;
-    feld[25] = 25 + 1;
-    feld[32] = 32 + 1;
-    feld[39] = 39 + 1;
 
+    for (int j = 0; j < 41; j = j + 7)
+    {
+        feld[j] = 1;
+    }
+    /*    for (int i = 1; i < 23; i = i + 2)
+    {
+        feld[i] = 2;
+    }
+    feld[22] = 1;
+    feld[29] = 2;
+    feld[25] = 1;
+    feld[32] = 2;
+    feld[39] = 1;
+    feld[13] = 0;
+    feld[6] = 0;
+    feld[20] = 0;
+    feld[5] = 1;
+    feld[3] = 1;
+    */
     for (int k = 0; k < 6; k++)
     {
         for (int l = 0; l < 7; l++)
@@ -34,11 +45,11 @@ int main_für_mich()
     a = bot2.zug_zeile();
     std::cout << a << std::endl;
     ZufallsBot bot3 = ZufallsBot(feld);
-    for (size_t i = 0; i < 100; i++)
-    {
-        a = bot3.zug_zeile();
-        std::cout << a << std::endl;
-    }
-    Spieler *b;
+    a = bot3.zug_zeile();
+    std::cout << a << std::endl;
+    SchlauerBot bot4 = SchlauerBot(feld);
+    a = bot4.zug_zeile();
+    std::cout << "Schaluer auswahl: " << a << std::endl;
+    return 0;
 }
 */
