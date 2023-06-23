@@ -4,13 +4,13 @@
 #include "SchlauerBot.hpp"
 #include "Spieler.hpp"
 #include <iostream>
-/*
+
 int feld[42] = {0};
 
 int main()
 {
 
-    for (int j = 0; j < 41; j = j + 7)
+    for (int j = 0; j < 20; j = j + 7)
     {
         feld[j] = 1;
     }
@@ -28,7 +28,7 @@ int main()
     feld[20] = 0;
     feld[5] = 1;
     feld[3] = 1;
-
+*/
     for (int k = 0; k < 6; k++)
     {
         for (int l = 0; l < 7; l++)
@@ -47,9 +47,8 @@ int main()
     ZufallsBot bot3 = ZufallsBot(feld);
     a = bot3.zug_zeile();
     std::cout << a << std::endl;
-    SchlauerBot bot4 = SchlauerBot(feld);
+    SchlauerBot bot4 = SchlauerBot(feld, 1);
     a = bot4.zug_zeile();
     std::cout << "Schaluer auswahl: " << a << std::endl;
     return 0;
 }
-*/

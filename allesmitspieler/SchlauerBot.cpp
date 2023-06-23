@@ -26,7 +26,7 @@ int SchlauerBot::zug_zeile()
         {
             if (*(m_feld + 7 * i + j) == m_spielnummer)
             {
-                if (cntr_sichselbst < 3)
+                if (cntr_sichselbst < 2)
                 {
                     cntr_sichselbst++;
                 }
@@ -62,7 +62,7 @@ int SchlauerBot::zug_zeile()
         {
             if (*(m_feld + 7 * j + i) == m_spielnummer)
             {
-                if (cntr_sichselbst < 3)
+                if (cntr_sichselbst < 2)
                 {
                     cntr_sichselbst++;
                 }
