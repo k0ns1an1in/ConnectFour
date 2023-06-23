@@ -1,9 +1,9 @@
 #include "Verwaltung.h"
-#include "allesmitspieler/VertikalerBot.hpp"
-#include "allesmitspieler/HorizontalerBot.hpp"
-#include "allesmitspieler/Mensch.hpp"
-#include "allesmitspieler/ZufallsBot.hpp"
-#include "allesmitspieler/SchlauerBot.hpp"
+#include "allesmitspieler/VertikalerBot.hpp" //1
+#include "allesmitspieler/HorizontalerBot.hpp" //2
+#include "allesmitspieler/Mensch.hpp" //3
+#include "allesmitspieler/ZufallsBot.hpp" //4
+#include "allesmitspieler/SchlauerBot.hpp" //5
 
 Verwaltung::Verwaltung(int spielerCode1, int spielerCode2):m_gui(GUI(&m_spielfeld[0]))
 {

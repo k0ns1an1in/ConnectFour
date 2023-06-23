@@ -11,8 +11,9 @@ int Mensch::zug_zeile()
     int zeile = -1;
     while (true)
     {
-        cout << "Bitte geben Sie eine Zeile ein: ";
+        cout << "Bitte geben Sie eine Spalte ein: ";
         cin >> zeile;
+        cout << endl;
         // todo hardcode zeilen
         if (zeile >= 0 && zeile <= 6)
         {
