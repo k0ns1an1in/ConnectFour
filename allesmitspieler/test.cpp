@@ -1,11 +1,12 @@
 #include "VertikalerBot.hpp"
 #include "HorizontalerBot.hpp"
 #include "ZufallsBot.hpp"
+#include "Spieler.hpp"
 #include <iostream>
 
 int feld[42] = {0};
 
-int main()
+int main_für_mich()
 {
     for (int j = 0; j < 22; j++)
     {
@@ -38,4 +39,5 @@ int main()
         a = bot3.zug_zeile();
         std::cout << a << std::endl;
     }
+    Spieler *b;
 }
