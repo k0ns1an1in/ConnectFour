@@ -20,3 +20,9 @@ schaut von links nach rechts nach der Spalte mit der geringsten Höhe:
 -Beginn 0|0 => ist es nicht 0 weiter nach rechts 
 => bis 0, dann aus i spalte returnen
 
+Schaluer Bot:
+vier in einer Reihe für den Gegner nciht machen 
+vier in einer Reihe für einen selbst suchen
+random sonst
+
+

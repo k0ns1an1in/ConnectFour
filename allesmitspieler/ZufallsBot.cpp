@@ -11,11 +11,6 @@ int ZufallsBot::zug_zeile()
     std::mt19937 gen(dev());
 
     int spaltenzahl;
-    for (size_t i = 0; i < 10; i++)
-    {
-        std::uniform_int_distribution<int> dist(0, 6);
-        spaltenzahl = dist(gen);
-    }
 
     while (true)
     {
