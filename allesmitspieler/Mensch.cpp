@@ -7,6 +7,7 @@ using std::endl;
 int Mensch::zug_zeile()
 {
     // durch user input
+    // todo man muss abfangen, wenn die spalte schon voll ist
     int zeile = -1;
     while (true)
     {
