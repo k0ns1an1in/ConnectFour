@@ -154,3 +154,12 @@ int Verwaltung::siegUeberpruefen()
     //todo check for horizontal win
     return 0;
 }
+
+Spieler *Verwaltung::getSpieler1()
+{
+    return m_spieler1;
+}
+Spieler *Verwaltung::getSpieler2()
+{
+    return m_spieler2;
+}

@@ -4,7 +4,7 @@
 #include "SchlauerBot.hpp"
 #include "Spieler.hpp"
 #include <iostream>
-
+/*
 int feld[42] = {0};
 
 int main()
@@ -52,3 +52,4 @@ int main()
     std::cout << "Schaluer auswahl: " << a << std::endl;
     return 0;
 }
+*/
