@@ -11,6 +11,9 @@ public:
     Spieler* getSpieler1() const;
     Spieler* getSpieler2() const;
     int siegUeberpruefen() const;
+    int horizontalerSiegUeberpruefen() const;
+    int vertikalerSiegUeberpruefen() const;
+    int diagonalerSiegUeberpruefen() const;
 private:
     int m_spielfeld[42] = {0};
     const GUI m_gui;
