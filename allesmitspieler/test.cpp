@@ -4,7 +4,7 @@
 #include "SchlauerBot.hpp"
 #include "Spieler.hpp"
 #include <iostream>
-
+/*
 int feld[42] = {0};
 
 int main()
@@ -14,7 +14,7 @@ int main()
     {
         feld[j] = 1;
     }
-    /*    for (int i = 1; i < 23; i = i + 2)
+        for (int i = 1; i < 23; i = i + 2)
     {
         feld[i] = 2;
     }
@@ -28,7 +28,7 @@ int main()
     feld[20] = 0;
     feld[5] = 1;
     feld[3] = 1;
-*/
+
     for (int k = 0; k < 6; k++)
     {
         for (int l = 0; l < 7; l++)
@@ -52,3 +52,4 @@ int main()
     std::cout << "Schaluer auswahl: " << a << std::endl;
     return 0;
 }
+ */

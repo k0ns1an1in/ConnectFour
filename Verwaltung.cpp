@@ -66,100 +66,102 @@ Verwaltung::Verwaltung(int spielerCode1, int spielerCode2):m_gui(GUI(&m_spielfel
     }
 }
 
-GUI Verwaltung::getGui()
+GUI Verwaltung::getGui() const
 {
     return m_gui;
 }
 
 int Verwaltung::spielsteinEinfuegen(int spalte, int spielerNummer)
 {
-    for(int i=0;i<6;i++)
+    for(int i = 0;i < 6;i++)
     {
-        if(m_spielfeld[spalte+i*7] == 0)
+        if(m_spielfeld[spalte + i*7] == 0)
         {
-            m_spielfeld[spalte+i*7] = spielerNummer;
+            m_spielfeld[spalte + i*7] = spielerNummer;
             return 1;
         }
     }
     return 0;
 }
 
-int Verwaltung::siegUeberpruefen()
+int Verwaltung::siegUeberpruefen() const
 {
     int spieler1counter = 0;
     int spieler2counter = 0;
-    for(int y=0;y<6;y++)      //check for horizontal win
+
+    for(int y = 0;y < 6;y++)      //check for horizontal win
     {
-        for(int x=0;x<7;x++)
+        for(int x = 0;x < 7;x++)
         {
-            if(m_spielfeld[x+y*7] == 1)
+            if(m_spielfeld[x + y*7] == 1)
             {
                 spieler1counter++;
-                spieler2counter=0;
-                if(spieler1counter==4)
+                spieler2counter = 0;
+                if(spieler1counter == 4)
                 {
                     return 1;
                 }
             }
-            if(m_spielfeld[x+y*7] == 2)
+            if(m_spielfeld[x + y*7] == 2)
             {
                 spieler2counter++;
-                spieler1counter=0;
-                if(spieler2counter==4)
+                spieler1counter = 0;
+                if(spieler2counter == 4)
                 {
                     return 2;
                 }
             }
-            if(m_spielfeld[x+y*7] == 0)
+            if(m_spielfeld[x + y*7] == 0)
             {
-                spieler1counter=0;
-                spieler2counter=0;
+                spieler1counter = 0;
+                spieler2counter = 0;
             }
         }
-        spieler1counter=0;
-        spieler2counter=0;
+        spieler1counter = 0;
+        spieler2counter = 0;
     }
 
-    for(int x=0;x<7;x++)    //check for vertical win
+    for(int x = 0;x < 7;x++)    //check for vertical win
     {
-        for(int y=0;y<6;y++)
+        for(int y = 0;y < 6;y++)
         {
-            if(m_spielfeld[x+y*7]==1)
+            if(m_spielfeld[x + y*7] == 1)
             {
                 spieler1counter++;
-                spieler2counter=0;
-                if(spieler1counter==4)
+                spieler2counter = 0;
+                if(spieler1counter == 4)
                 {
                     return 1;
                 }
             }
-            if(m_spielfeld[x+y*7]==2)
+            if(m_spielfeld[x + y*7] == 2)
             {
                 spieler2counter++;
-                spieler1counter=0;
-                if(spieler2counter==4)
+                spieler1counter = 0;
+                if(spieler2counter == 4)
                 {
                     return 2;
                 }
             }
-            if(m_spielfeld[x+y*7]==0)
+            if(m_spielfeld[x + y*7] == 0)
             {
-                spieler1counter=0;
-                spieler2counter=0;
+                spieler1counter = 0;
+                spieler2counter = 0;
             }
         }
-        spieler1counter=0;
-        spieler2counter=0;
+        spieler1counter = 0;
+        spieler2counter = 0;
     }
     //todo check for horizontal win
     return 0;
 }
 
-Spieler *Verwaltung::getSpieler1()
+Spieler *Verwaltung::getSpieler1() const
 {
     return m_spieler1;
 }
-Spieler *Verwaltung::getSpieler2()
+
+Spieler *Verwaltung::getSpieler2() const
 {
     return m_spieler2;
 }

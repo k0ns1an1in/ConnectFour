@@ -4,7 +4,7 @@ using namespace std;
 int main()
 {
     int oscillator=0;
-    Verwaltung device = Verwaltung(3, 3);
+    Verwaltung device = Verwaltung(3, 5);
     device.getGui().spielfeldDrucken();
     while(device.siegUeberpruefen()==0)
     {
