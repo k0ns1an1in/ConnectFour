@@ -11,3 +11,8 @@
 3178	4993	7092238775985398	CMakeFiles/ConnectFour.dir/allesmitspieler/ZufallsBot.cpp.obj	9cc46e0d878d2981
 1943	3060	7093910662954900	CMakeFiles/ConnectFour.dir/allesmitspieler/test.cpp.obj	57af79939926df4e
 4993	5176	7092238777817694	CMakeFiles/ConnectFour.dir/allesmitspieler/HorizontalerBot.cpp.obj	f4be651c6ed32965
+5	749	7093927152496454	CMakeFiles/ConnectFour.dir/main.cpp.obj	1e6c1e06e3b44b9f
+13	1014	7093927155162284	CMakeFiles/ConnectFour.dir/Verwaltung.cpp.obj	af8bdc2693527d0c
+1014	1173	7093927156615862	ConnectFour.exe	1f57ee0065c742f7
+4	1040	7093927285789419	CMakeFiles/ConnectFour.dir/Verwaltung.cpp.obj	af8bdc2693527d0c
+1041	1197	7093927287293029	ConnectFour.exe	1f57ee0065c742f7
