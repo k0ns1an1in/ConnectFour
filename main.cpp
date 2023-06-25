@@ -1,10 +1,10 @@
 #include <iostream>
 #include "Verwaltung.h"
 using namespace std;
+
 int main()
 {
-    int oscillator=0;
-    Verwaltung device = Verwaltung(3, 3);
+    Verwaltung device = Verwaltung(5, 5);
     device.spielen();
     return 0;
 }
