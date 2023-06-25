@@ -1,6 +1,7 @@
 #pragma once
 #include "GUI.h"
 #include "allesmitspieler/Spieler.hpp"
+
 class Verwaltung
 {
 public:
