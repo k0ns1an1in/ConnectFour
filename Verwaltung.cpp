@@ -84,7 +84,7 @@ int Verwaltung::spielsteinEinfuegen(int spalte, int spielerNummer)
     return 0;
 }
 
-int Verwaltung::siegUeberpruefen() const
+int Verwaltung::horizontalerSiegUeberpruefen() const
 {
     int spieler1counter = 0;
     int spieler2counter = 0;
@@ -120,6 +120,13 @@ int Verwaltung::siegUeberpruefen() const
         spieler1counter = 0;
         spieler2counter = 0;
     }
+    return 0;
+}
+
+int Verwaltung::vertikalerSiegUeberpruefen() const
+{
+    int spieler1counter = 0;
+    int spieler2counter = 0;
 
     for(int x = 0;x < 7;x++)    //check for vertical win
     {
@@ -152,7 +159,112 @@ int Verwaltung::siegUeberpruefen() const
         spieler1counter = 0;
         spieler2counter = 0;
     }
-    //todo check for horizontal win
+    return 0;
+}
+
+int Verwaltung::diagonalerSiegUeberpruefen() const
+{
+    int spieler1counter = 0;
+    int spieler2counter = 0;
+
+    for(int start = 6;start >= 0;start--)
+    {
+        for (int i = start; i < 42; i += 6)
+        {
+            if(i % 7 == 6)
+            {
+                spieler1counter = 0;
+                spieler2counter = 0;
+            }
+            if(m_spielfeld[i] == 1)
+            {
+                spieler1counter++;
+                spieler2counter = 0;
+                if(spieler1counter == 4)
+                {
+                    return 1;
+                }
+            }
+            if(m_spielfeld[i] == 2)
+            {
+                spieler2counter++;
+                spieler1counter = 0;
+                if(spieler2counter == 4)
+                {
+                    return 2;
+                }
+            }
+            if(m_spielfeld[0] == 0)
+            {
+                spieler1counter = 0;
+                spieler2counter = 0;
+            }
+        }
+        spieler1counter = 0;
+        spieler2counter = 0;
+    }
+
+    for(int start = 0;start < 7;start++)
+    {
+        for (int i = start; i < 42; i += 8)
+        {
+            if(i % 7 == 0)
+            {
+                spieler1counter = 0;
+                spieler2counter = 0;
+            }
+            if(m_spielfeld[i] == 1)
+            {
+                spieler1counter++;
+                spieler2counter = 0;
+                if(spieler1counter == 4)
+                {
+                    return 1;
+                }
+            }
+            if(m_spielfeld[i] == 2)
+            {
+                spieler2counter++;
+                spieler1counter = 0;
+                if(spieler2counter == 4)
+                {
+                    return 2;
+                }
+            }
+            if(m_spielfeld[0] == 0)
+            {
+                spieler1counter = 0;
+                spieler2counter = 0;
+            }
+        }
+        spieler1counter = 0;
+        spieler2counter = 0;
+    }
+    return 0;
+}
+
+int Verwaltung::siegUeberpruefen() const
+{
+    int horizonteleBedingung = 0;
+    int vertikaleBedingung = 0;
+    int diagonaleBedingung = 0;
+
+    horizonteleBedingung = horizontalerSiegUeberpruefen();
+    vertikaleBedingung = vertikalerSiegUeberpruefen();
+    diagonaleBedingung = diagonalerSiegUeberpruefen();
+
+    if(horizonteleBedingung != 0)
+    {
+        return horizonteleBedingung;
+    }
+    if(vertikaleBedingung != 0)
+    {
+        return vertikaleBedingung;
+    }
+    if(diagonaleBedingung != 0)
+    {
+        return diagonaleBedingung;
+    }
     return 0;
 }
 
