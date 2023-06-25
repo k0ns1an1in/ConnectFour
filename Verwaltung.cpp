@@ -4,6 +4,7 @@
 #include "allesmitspieler/Mensch.hpp" //3
 #include "allesmitspieler/ZufallsBot.hpp" //4
 #include "allesmitspieler/SchlauerBot.hpp" //5
+using namespace std;
 
 Verwaltung::Verwaltung(int spielerCode1, int spielerCode2):m_gui(GUI(&m_spielfeld[0]))
 {
@@ -71,6 +72,29 @@ GUI Verwaltung::getGui() const
     return m_gui;
 }
 
+void Verwaltung::spielen()
+{
+    int oscillator = 0;
+    cout << "-----------SPIEL BEGINNT----------" << endl;
+    this->getGui().spielfeldDrucken();
+    while(this->siegUeberpruefen()==0)
+    {
+        if(!oscillator)
+        {
+            cout << "Spieler 1 am Zug" << endl;
+            this->spielsteinEinfuegen(this->getSpieler1()->zug_zeile(), 1);
+            oscillator=!oscillator;
+        }else if(oscillator)
+        {
+            cout << "Spieler 2 am Zug" << endl;
+            this->spielsteinEinfuegen(this->getSpieler2()->zug_zeile(), 2);
+            oscillator=!oscillator;
+        }
+        this->getGui().spielfeldDrucken();
+    }
+    cout << "Spieler " << !oscillator +1 << " hat gewonnen!" << endl;
+    return;
+}
 int Verwaltung::spielsteinEinfuegen(int spalte, int spielerNummer)
 {
     for(int i = 0;i < 6;i++)

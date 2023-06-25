@@ -7,6 +7,7 @@ class Verwaltung
 public:
     Verwaltung(int codeSpieler1, int codeSpieler2);
     int spielsteinEinfuegen(int spalte, int spielerNummer);
+    void spielen();
     GUI getGui() const;
     Spieler* getSpieler1() const;
     Spieler* getSpieler2() const;
