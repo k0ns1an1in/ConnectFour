@@ -10,11 +10,11 @@ int feld[42] = {0};
 int main()
 {
 
-    for (int j = 0; j < 41; j = j + 7)
+    for (int j = 0; j < 20; j = j + 7)
     {
         feld[j] = 1;
     }
-    /*    for (int i = 1; i < 23; i = i + 2)
+        for (int i = 1; i < 23; i = i + 2)
     {
         feld[i] = 2;
     }
@@ -47,9 +47,9 @@ int main()
     ZufallsBot bot3 = ZufallsBot(feld);
     a = bot3.zug_zeile();
     std::cout << a << std::endl;
-    SchlauerBot bot4 = SchlauerBot(feld);
+    SchlauerBot bot4 = SchlauerBot(feld, 1);
     a = bot4.zug_zeile();
     std::cout << "Schaluer auswahl: " << a << std::endl;
     return 0;
 }
-*/
+ */

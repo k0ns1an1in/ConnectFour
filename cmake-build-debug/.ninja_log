@@ -80,3 +80,10 @@
 907	1108	7092247861490135	ConnectFour.exe	1f57ee0065c742f7
 5	1529	7092249233959857	CMakeFiles/ConnectFour.dir/main.cpp.obj	1e6c1e06e3b44b9f
 1530	1803	7092249236683974	ConnectFour.exe	1f57ee0065c742f7
+3	1548	7092251652603777	CMakeFiles/ConnectFour.dir/main.cpp.obj	1e6c1e06e3b44b9f
+29	1885	7092251656338742	CMakeFiles/ConnectFour.dir/allesmitspieler/Mensch.cpp.obj	dc686a42b51b37aa
+12	2209	7092251659460337	CMakeFiles/ConnectFour.dir/Verwaltung.cpp.obj	af8bdc2693527d0c
+1550	3477	7092251672364795	CMakeFiles/ConnectFour.dir/allesmitspieler/SchlauerBot.cpp.obj	101087217f66628f
+1885	3558	7092251673187609	CMakeFiles/ConnectFour.dir/allesmitspieler/test.cpp.obj	57af79939926df4e
+7	1266	7092252118754449	CMakeFiles/ConnectFour.dir/allesmitspieler/test.cpp.obj	57af79939926df4e
+1266	1463	7092252120633385	ConnectFour.exe	1f57ee0065c742f7
