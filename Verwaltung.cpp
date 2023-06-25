@@ -95,6 +95,7 @@ void Verwaltung::spielen()
     cout << "Spieler " << !oscillator +1 << " hat gewonnen!" << endl;
     return;
 }
+
 int Verwaltung::spielsteinEinfuegen(int spalte, int spielerNummer)
 {
     for(int i = 0;i < 6;i++)
