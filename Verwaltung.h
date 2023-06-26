@@ -2,6 +2,11 @@
 #include "GUI.h"
 #include <iostream>
 #include "allesmitspieler/Spieler.hpp"
+#include "allesmitspieler/VertikalerBot.hpp"   //1
+#include "allesmitspieler/HorizontalerBot.hpp" //2
+#include "allesmitspieler/Mensch.hpp"          //3
+#include "allesmitspieler/ZufallsBot.hpp"      //4
+#include "allesmitspieler/SchlauerBot.hpp"     //5
 
 class Verwaltung
 {
