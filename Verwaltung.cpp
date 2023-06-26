@@ -18,6 +18,7 @@ Verwaltung::Verwaltung() : m_gui(GUI(&m_spielfeld[0]))
          << "(5): Schlauer Bot" << endl;
 
     cin >> spielerCode;
+    cout << flush;
 
     switch (spielerCode)
     {
@@ -47,13 +48,15 @@ Verwaltung::Verwaltung() : m_gui(GUI(&m_spielfeld[0]))
         break;
     }
     }
-    cout << "Welche Art von Spieler ist Spieler1?" << endl
+    cout << "Welche Art von Spieler ist Spieler2?" << endl
          << "(1): ..."
          << "(2): ..."
          << "(3): ..."
          << "(4): ..."
          << "(5): ..." << endl;
+
     cin >> spielerCode;
+    cout << flush;
 
     switch (spielerCode)
     {
