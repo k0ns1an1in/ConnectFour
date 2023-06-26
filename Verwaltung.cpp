@@ -11,11 +11,11 @@ Verwaltung::Verwaltung() : m_gui(GUI(&m_spielfeld[0]))
     int spielerCode;
 
     cout << "Welche Art von Spieler ist Spieler1?" << endl
-         << "(1): ..."
-         << "(2): ..."
-         << "(3): ..."
-         << "(4): ..."
-         << "(5): ..." << endl;
+         << "(1): Vertikaler Bot" << endl
+         << "(2): Horizontaler Bot" << endl
+         << "(3): Mensch" << endl
+         << "(4): Zufalls Bot" << endl
+         << "(5): Schlauer Bot" << endl;
 
     cin >> spielerCode;
 
