@@ -1,3 +1,4 @@
+#include <unistd.h>
 #include "Verwaltung.h"
 
 using namespace std;
@@ -84,6 +85,18 @@ Verwaltung::Verwaltung() : m_gui(GUI(&m_spielfeld[0]))
     }
 }
 
+int Verwaltung::vollUeberpruefen() const
+{
+    int check = 1;
+    for(int i = 0;i < 42;i++)
+    {
+        if(m_spielfeld[i] == 0)
+        {
+            check = 0;
+        }
+    }
+    return check;
+}
 GUI Verwaltung::getGui() const
 {
     return m_gui;
@@ -99,14 +112,42 @@ void Verwaltung::spielen()
         if (!oscillator)
         {
             cout << "Spieler 1 am Zug" << endl;
-            this->spielsteinEinfuegen(this->getSpieler1()->zug_zeile(), 1);
+            int spalte = this->getSpieler1()->zug_zeile();
+            while(m_spielfeld[spalte+35] != 0)
+            {
+                spalte = this->getSpieler1()->zug_zeile();
+                cout << "Fehler, Spalte voll!" << endl;
+            }
+            this->spielsteinEinfuegen(spalte, 1);
+            if(vollUeberpruefen())
+            {
+                for(int i = 0;i < 42;i++)
+                {
+                    m_spielfeld[i] = 0;
+                }
+            }
             oscillator = !oscillator;
+            sleep(1);
         }
         else if (oscillator)
         {
             cout << "Spieler 2 am Zug" << endl;
-            this->spielsteinEinfuegen(this->getSpieler2()->zug_zeile(), 2);
+            int spalte = this->getSpieler2()->zug_zeile();
+            while(m_spielfeld[spalte+35] != 0)
+            {
+                spalte = this->getSpieler2()->zug_zeile();
+                cout << "Fehler, Spalte voll!" << endl;
+            }
+            this->spielsteinEinfuegen(spalte, 2);
+            if(vollUeberpruefen())
+            {
+                for(int i = 0;i < 42;i++)
+                {
+                    m_spielfeld[i] = 0;
+                }
+            }
             oscillator = !oscillator;
+            sleep(1);
         }
         this->getGui().spielfeldDrucken();
     }

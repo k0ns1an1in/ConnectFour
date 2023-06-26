@@ -3,21 +3,19 @@
 using std::cin;
 using std::cout;
 using std::endl;
-
+//feste grenzen fehlen
 int Mensch::zug_zeile()
 {
-    // durch user input
-    // todo man muss abfangen, wenn die spalte schon voll ist
-    int zeile = -1;
+    int spalte = -1;
     while (true)
     {
         cout << "Bitte geben Sie eine Spalte ein: ";
-        cin >> zeile;
+        cin >> spalte;
         cout << endl;
         // todo hardcode zeilen
-        if (zeile >= 0 && zeile <= 6)
+        if (spalte >= 0 && spalte <= 6)
         {
-            return zeile;
+            return spalte;
         }
         else
         {

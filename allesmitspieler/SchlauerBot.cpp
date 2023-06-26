@@ -10,9 +10,6 @@ SchlauerBot::SchlauerBot(int *feld, int spielernummer)
 int SchlauerBot::zug_zeile()
 {
     // todo richtiger algorithmus erarbeiten
-    // test
-    // todo feste grenzen des Felds
-    // muss wissen welche zahl er selbst ist
 
     int zahl_gegner = 1;
 

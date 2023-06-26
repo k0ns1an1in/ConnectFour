@@ -11,7 +11,6 @@ VertikalerBot::VertikalerBot(int *feld)
 int VertikalerBot::zug_zeile()
 {
     // algorithmus
-    // todo feste grenzen
     int zugzeile = 0;
     int vorlaeufigemaxhoehe;
     int wert = 0;

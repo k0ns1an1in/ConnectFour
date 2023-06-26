@@ -21,9 +21,5 @@ int ZufallsBot::zug_zeile()
             return spaltenzahl;
         }
     }
-
-    // algorithmus try out
-    //  feste grenzen todo
-
     return -1;
 }

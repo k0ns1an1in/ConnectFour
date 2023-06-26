@@ -14,6 +14,7 @@ public:
     Verwaltung();
     int spielsteinEinfuegen(int spalte, int spielerNummer);
     void spielen();
+    int vollUeberpruefen() const;
     GUI getGui() const;
     Spieler *getSpieler1() const;
     Spieler *getSpieler2() const;

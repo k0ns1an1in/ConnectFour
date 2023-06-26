@@ -9,7 +9,7 @@ int HorizontalerBot::zug_zeile()
 {
     // zeile evaluieren
 
-    // todo feste grenzen des Felds
+
     int wert = 0;
     for (int i = 0; i < 42; i++)
     {
