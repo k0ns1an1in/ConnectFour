@@ -12,7 +12,7 @@ void GUI::spielfeldDrucken() const
     {
         for(int x = 0;x < 7;x++)
         {
-            cout << *(x + m_spielfeld + 7*y) << "\t";
+            cout << *(x + m_spielfeld + 7*y) << " ";
         }
         cout << endl;
     }

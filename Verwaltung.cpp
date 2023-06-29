@@ -85,6 +85,67 @@ Verwaltung::Verwaltung() : m_gui(GUI(&m_spielfeld[0]))
     }
 }
 
+Verwaltung::Verwaltung(int spielerCode1, int spielerCode2): m_gui(GUI(&m_spielfeld[0]))
+{
+    switch (spielerCode1)
+    {
+        case 1:
+        {
+            m_spieler1 = new VertikalerBot(&m_spielfeld[0]);
+            break;
+        }
+        case 2:
+        {
+            m_spieler1 = new HorizontalerBot(&m_spielfeld[0]);
+            break;
+        }
+        case 3:
+        {
+            m_spieler1 = new Mensch();
+            break;
+        }
+        case 4:
+        {
+            m_spieler1 = new ZufallsBot(&m_spielfeld[0]);
+            break;
+        }
+        case 5:
+        {
+            m_spieler1 = new SchlauerBot(&m_spielfeld[0], 1);
+            break;
+        }
+    }
+
+    switch (spielerCode2)
+    {
+        case 1:
+        {
+            m_spieler2 = new VertikalerBot(&m_spielfeld[0]);
+            break;
+        }
+        case 2:
+        {
+            m_spieler2 = new HorizontalerBot(&m_spielfeld[0]);
+            break;
+        }
+        case 3:
+        {
+            m_spieler2 = new Mensch();
+            break;
+        }
+        case 4:
+        {
+            m_spieler2 = new ZufallsBot(&m_spielfeld[0]);
+            break;
+        }
+        case 5:
+        {
+            m_spieler2 = new SchlauerBot(&m_spielfeld[0], 2);
+            break;
+        }
+    }
+}
+
 int Verwaltung::vollUeberpruefen() const
 {
     int check = 1;
@@ -97,12 +158,73 @@ int Verwaltung::vollUeberpruefen() const
     }
     return check;
 }
+
+void Verwaltung::spielenTest(int anzahlSpiele)
+{
+    int oscillator = 0;
+    int spielZaehler = 0;
+    double spieler1counter = 0;
+    double spieler2counter = 0;
+    while(spielZaehler < anzahlSpiele)
+    {
+        for(int i = 0;i < 42;i++)
+        {
+            m_spielfeld[i] = 0;
+        }
+        while (this->siegUeberpruefen() == 0)
+        {
+            if (!oscillator) {
+                int spalte = this->getSpieler1()->zug_zeile();
+                while (m_spielfeld[spalte + 35] != 0) {
+                    spalte = this->getSpieler1()->zug_zeile();
+                }
+                this->spielsteinEinfuegen(spalte, 1);
+                if (vollUeberpruefen())
+                {
+                    for (int i = 0; i < 42; i++)
+                    {
+                        m_spielfeld[i] = 0;
+                    }
+                }
+                oscillator = !oscillator;
+            } else if (oscillator) {
+                int spalte = this->getSpieler2()->zug_zeile();
+                while (m_spielfeld[spalte + 35] != 0) {
+                    spalte = this->getSpieler2()->zug_zeile();
+                }
+                this->spielsteinEinfuegen(spalte, 2);
+                if (vollUeberpruefen()) {
+                    for (int i = 0; i < 42; i++) {
+                        m_spielfeld[i] = 0;
+                    }
+                }
+                oscillator = !oscillator;
+            }
+        }
+        if(siegUeberpruefen() == 1)
+        {
+            spieler1counter++;
+        }else
+        {
+            spieler2counter++;
+        }
+        spielZaehler++;
+    }
+    if(spieler1counter > spieler2counter)
+    {
+        cout << "Spieler1 ist Gesamtsieger mit " << (spieler1counter/anzahlSpiele) * 100 << "% Siegesquote" << endl;
+    }else
+    {
+        cout << "Spieler2 ist Gesamtsieger mit " << (spieler2counter/anzahlSpiele) * 100 << "% Siegesquote" << endl;
+    }
+}
+
 GUI Verwaltung::getGui() const
 {
     return m_gui;
 }
 
-void Verwaltung::spielen()
+int Verwaltung::spielen()
 {
     int oscillator = 0;
     cout << "-----------SPIEL BEGINNT----------" << endl;
@@ -152,7 +274,7 @@ void Verwaltung::spielen()
         this->getGui().spielfeldDrucken();
     }
     cout << "Spieler " << !oscillator + 1 << " hat gewonnen!" << endl;
-    return;
+    return siegUeberpruefen();
 }
 
 int Verwaltung::spielsteinEinfuegen(int spalte, int spielerNummer)
@@ -251,16 +373,12 @@ int Verwaltung::diagonalerSiegUeberpruefen() const
     int spieler1counter = 0;
     int spieler2counter = 0;
 
-    for (int start = 6; start >= 0; start--)
+    //nicht hinterfragen, enorm schwer zu verstehen
+    for(int i = 3;i <= 5;i++)
     {
-        for (int i = start; i < 42; i += 6)
+        for(int k = i;k <= i * 7;k += 6)
         {
-            if (i % 7 == 6)
-            {
-                spieler1counter = 0;
-                spieler2counter = 0;
-            }
-            if (m_spielfeld[i] == 1)
+            if (m_spielfeld[k] == 1)
             {
                 spieler1counter++;
                 spieler2counter = 0;
@@ -269,7 +387,7 @@ int Verwaltung::diagonalerSiegUeberpruefen() const
                     return 1;
                 }
             }
-            if (m_spielfeld[i] == 2)
+            if (m_spielfeld[k] == 2)
             {
                 spieler2counter++;
                 spieler1counter = 0;
@@ -278,7 +396,38 @@ int Verwaltung::diagonalerSiegUeberpruefen() const
                     return 2;
                 }
             }
-            if (m_spielfeld[0] == 0)
+            if (m_spielfeld[k] == 0)
+            {
+                spieler1counter = 0;
+                spieler2counter = 0;
+            }
+        }
+        spieler1counter = 0;
+        spieler2counter = 0;
+    }
+    for(int i = 6;i <= 20;i += 7)
+    {
+        for(int k = i;k <= 38;k += 6)
+        {
+            if (m_spielfeld[k] == 1)
+            {
+                spieler1counter++;
+                spieler2counter = 0;
+                if (spieler1counter == 4)
+                {
+                    return 1;
+                }
+            }
+            if (m_spielfeld[k] == 2)
+            {
+                spieler2counter++;
+                spieler1counter = 0;
+                if (spieler2counter == 4)
+                {
+                    return 2;
+                }
+            }
+            if (m_spielfeld[k] == 0)
             {
                 spieler1counter = 0;
                 spieler2counter = 0;
@@ -288,16 +437,11 @@ int Verwaltung::diagonalerSiegUeberpruefen() const
         spieler2counter = 0;
     }
 
-    for (int start = 0; start < 7; start++)
+    for(int i = 1;i <= 3;i++)
     {
-        for (int i = start; i < 42; i += 8)
+        for(int k = i;k <= 41 - (7 * (i - 1));k += 8)
         {
-            if (i % 7 == 0)
-            {
-                spieler1counter = 0;
-                spieler2counter = 0;
-            }
-            if (m_spielfeld[i] == 1)
+            if (m_spielfeld[k] == 1)
             {
                 spieler1counter++;
                 spieler2counter = 0;
@@ -306,7 +450,7 @@ int Verwaltung::diagonalerSiegUeberpruefen() const
                     return 1;
                 }
             }
-            if (m_spielfeld[i] == 2)
+            if (m_spielfeld[k] == 2)
             {
                 spieler2counter++;
                 spieler1counter = 0;
@@ -315,7 +459,7 @@ int Verwaltung::diagonalerSiegUeberpruefen() const
                     return 2;
                 }
             }
-            if (m_spielfeld[0] == 0)
+            if (m_spielfeld[k] == 0)
             {
                 spieler1counter = 0;
                 spieler2counter = 0;
@@ -324,6 +468,38 @@ int Verwaltung::diagonalerSiegUeberpruefen() const
         spieler1counter = 0;
         spieler2counter = 0;
     }
+    for(int i = 14;i >= 0;i -= 7)
+    {
+        for(int k = i;k <= 40;k += 8)
+        {
+            if (m_spielfeld[k] == 1)
+            {
+                spieler1counter++;
+                spieler2counter = 0;
+                if (spieler1counter == 4)
+                {
+                    return 1;
+                }
+            }
+            if (m_spielfeld[k] == 2)
+            {
+                spieler2counter++;
+                spieler1counter = 0;
+                if (spieler2counter == 4)
+                {
+                    return 2;
+                }
+            }
+            if (m_spielfeld[k] == 0)
+            {
+                spieler1counter = 0;
+                spieler2counter = 0;
+            }
+        }
+        spieler1counter = 0;
+        spieler2counter = 0;
+    }
+
     return 0;
 }
 

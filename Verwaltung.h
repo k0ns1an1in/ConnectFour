@@ -12,8 +12,10 @@ class Verwaltung
 {
 public:
     Verwaltung();
+    Verwaltung(int spielerCode1, int spielerCode2);
     int spielsteinEinfuegen(int spalte, int spielerNummer);
-    void spielen();
+    int spielen();
+    void spielenTest(int anzahlSpiele);
     int vollUeberpruefen() const;
     GUI getGui() const;
     Spieler *getSpieler1() const;
