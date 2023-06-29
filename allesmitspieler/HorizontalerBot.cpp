@@ -5,7 +5,7 @@ HorizontalerBot::HorizontalerBot(int *feld)
 {
 }
 
-int HorizontalerBot::zug_zeile()
+int HorizontalerBot::zug_spalte()
 {
     // zeile evaluieren
 

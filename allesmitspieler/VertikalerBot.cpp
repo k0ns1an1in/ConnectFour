@@ -8,7 +8,7 @@ VertikalerBot::VertikalerBot(int *feld)
 {
 }
 
-int VertikalerBot::zug_zeile()
+int VertikalerBot::zug_spalte()
 {
     // algorithmus
     int zugzeile = 0;

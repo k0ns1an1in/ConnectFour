@@ -5,6 +5,6 @@ class Spieler
 
 public:
     Spieler(){};
-    virtual int zug_zeile() = 0;
+    virtual int zug_spalte() = 0;
     virtual ~Spieler() {}
 };

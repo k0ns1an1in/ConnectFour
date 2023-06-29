@@ -1,11 +1,13 @@
 #include "GUI.h"
 using namespace std;
 
+//constructor for GUI
 GUI::GUI(int *neuesFeld)
 {
     m_spielfeld = neuesFeld;
 }
 
+//prints the board
 void GUI::spielfeldDrucken() const
 {
     for(int y = 5;y >= 0;y--)

@@ -177,9 +177,9 @@ void Verwaltung::spielenTest(int anzahlSpiele)
         while (this->siegUeberpruefen() == 0)
         {
             if (!oscillator) {
-                int spalte = this->getSpieler1()->zug_zeile();
+                int spalte = this->getSpieler1()->zug_spalte();
                 while (m_spielfeld[spalte + 35] != 0) {
-                    spalte = this->getSpieler1()->zug_zeile();
+                    spalte = this->getSpieler1()->zug_spalte();
                 }
                 this->spielsteinEinfuegen(spalte, 1);
                 if (vollUeberpruefen())
@@ -191,9 +191,9 @@ void Verwaltung::spielenTest(int anzahlSpiele)
                 }
                 oscillator = !oscillator;
             } else if (oscillator) {
-                int spalte = this->getSpieler2()->zug_zeile();
+                int spalte = this->getSpieler2()->zug_spalte();
                 while (m_spielfeld[spalte + 35] != 0) {
-                    spalte = this->getSpieler2()->zug_zeile();
+                    spalte = this->getSpieler2()->zug_spalte();
                 }
                 this->spielsteinEinfuegen(spalte, 2);
                 if (vollUeberpruefen()) {
@@ -239,10 +239,10 @@ int Verwaltung::spielen()
         if (!oscillator)
         {
             cout << "Spieler 1 am Zug" << endl;
-            int spalte = this->getSpieler1()->zug_zeile();
+            int spalte = this->getSpieler1()->zug_spalte();
             while(m_spielfeld[spalte+35] != 0)
             {
-                spalte = this->getSpieler1()->zug_zeile();
+                spalte = this->getSpieler1()->zug_spalte();
                 cout << "Fehler, Spalte voll!" << endl;
             }
             this->spielsteinEinfuegen(spalte, 1);
@@ -259,10 +259,10 @@ int Verwaltung::spielen()
         else if (oscillator)
         {
             cout << "Spieler 2 am Zug" << endl;
-            int spalte = this->getSpieler2()->zug_zeile();
+            int spalte = this->getSpieler2()->zug_spalte();
             while(m_spielfeld[spalte+35] != 0)
             {
-                spalte = this->getSpieler2()->zug_zeile();
+                spalte = this->getSpieler2()->zug_spalte();
                 cout << "Fehler, Spalte voll!" << endl;
             }
             this->spielsteinEinfuegen(spalte, 2);

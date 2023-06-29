@@ -2,12 +2,14 @@
 #include <random>
 #include <iostream>
 
+//constructor
 SchlauerBot::SchlauerBot(int *feld, int spielernummer)
     : Bots{feld}, m_spielnummer{spielernummer}
 {
 }
 
-int SchlauerBot::zug_zeile()
+//returns the wanted column
+int SchlauerBot::zug_spalte()
 {
     //neuer algo: ~90.5% Siegquote gegen random
     int counterEigeneSteine = 0;

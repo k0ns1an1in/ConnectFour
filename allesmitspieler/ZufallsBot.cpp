@@ -5,7 +5,7 @@ ZufallsBot::ZufallsBot(int *feld)
 {
 }
 
-int ZufallsBot::zug_zeile()
+int ZufallsBot::zug_spalte()
 {
     std::random_device dev;
     std::mt19937 gen(dev());

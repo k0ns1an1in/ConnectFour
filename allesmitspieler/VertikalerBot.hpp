@@ -7,5 +7,5 @@ class VertikalerBot : public Bots
 {
 public:
     VertikalerBot(int *feld);
-    int zug_zeile() override;
+    int zug_spalte() override;
 };

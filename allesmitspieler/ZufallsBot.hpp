@@ -7,5 +7,5 @@ class ZufallsBot : public Bots
 {
 public:
     ZufallsBot(int *feld);
-    int zug_zeile() override;
+    int zug_spalte() override;
 };

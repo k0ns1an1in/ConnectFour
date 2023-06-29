@@ -3,8 +3,8 @@
 using std::cin;
 using std::cout;
 using std::endl;
-//feste grenzen fehlen
-int Mensch::zug_zeile()
+
+int Mensch::zug_spalte()
 {
     int spalte = -1;
     while (true)

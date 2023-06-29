@@ -48,7 +48,7 @@ int main()
     a = bot3.zug_zeile();
     std::cout << a << std::endl;
     SchlauerBot bot4 = SchlauerBot(feld, 1);
-    a = bot4.zug_zeile();
+    a = bot4.zug_spalte();
     std::cout << "Schaluer auswahl: " << a << std::endl;
     return 0;
 }

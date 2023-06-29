@@ -6,5 +6,5 @@ class HorizontalerBot : public Bots
 {
 public:
     HorizontalerBot(int *feld);
-    int zug_zeile() override;
+    int zug_spalte() override;
 };

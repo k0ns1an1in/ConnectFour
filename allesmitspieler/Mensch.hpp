@@ -7,5 +7,5 @@ class Mensch : public Spieler
 {
 public:
     Mensch(){};
-    int zug_zeile() override;
+    int zug_spalte() override;
 };
