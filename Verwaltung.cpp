@@ -1,8 +1,8 @@
 #include <unistd.h>
 #include "Verwaltung.h"
-
 using namespace std;
 
+//constructor for normal game
 Verwaltung::Verwaltung() : m_gui(GUI(&m_spielfeld[0]))
 {
     int spielerCode;
@@ -85,6 +85,7 @@ Verwaltung::Verwaltung() : m_gui(GUI(&m_spielfeld[0]))
     }
 }
 
+//constructor for testing
 Verwaltung::Verwaltung(int spielerCode1, int spielerCode2): m_gui(GUI(&m_spielfeld[0]))
 {
     switch (spielerCode1)
@@ -146,6 +147,7 @@ Verwaltung::Verwaltung(int spielerCode1, int spielerCode2): m_gui(GUI(&m_spielfe
     }
 }
 
+//check if field is full --> returns 1 if full
 int Verwaltung::vollUeberpruefen() const
 {
     int check = 1;
@@ -159,6 +161,7 @@ int Verwaltung::vollUeberpruefen() const
     return check;
 }
 
+//executes given amount of games and prints the percentage of wins without GUI
 void Verwaltung::spielenTest(int anzahlSpiele)
 {
     int oscillator = 0;
@@ -219,11 +222,13 @@ void Verwaltung::spielenTest(int anzahlSpiele)
     }
 }
 
+//returns GUI instance
 GUI Verwaltung::getGui() const
 {
     return m_gui;
 }
 
+//executes one game with GUI
 int Verwaltung::spielen()
 {
     int oscillator = 0;
@@ -277,6 +282,7 @@ int Verwaltung::spielen()
     return siegUeberpruefen();
 }
 
+//adds a token to the board
 int Verwaltung::spielsteinEinfuegen(int spalte, int spielerNummer)
 {
     for (int i = 0; i < 6; i++)
@@ -290,6 +296,7 @@ int Verwaltung::spielsteinEinfuegen(int spalte, int spielerNummer)
     return 0;
 }
 
+//checks entire board for horizontal win --> returns 1 if player 1 has won, 2 if player 2 has won, 0 if no winners
 int Verwaltung::horizontalerSiegUeberpruefen() const
 {
     int spieler1counter = 0;
@@ -329,6 +336,7 @@ int Verwaltung::horizontalerSiegUeberpruefen() const
     return 0;
 }
 
+//checks entire board for vertical win --> returns 1 if player 1 has won, 2 if player 2 has won, 0 if no winners
 int Verwaltung::vertikalerSiegUeberpruefen() const
 {
     int spieler1counter = 0;
@@ -368,6 +376,7 @@ int Verwaltung::vertikalerSiegUeberpruefen() const
     return 0;
 }
 
+//checks entire board for diagonal win --> returns 1 if player 1 has won, 2 if player 2 has won, 0 if no winners
 int Verwaltung::diagonalerSiegUeberpruefen() const
 {
     int spieler1counter = 0;
@@ -503,6 +512,7 @@ int Verwaltung::diagonalerSiegUeberpruefen() const
     return 0;
 }
 
+//executes all win-checks --> returns 1 if player 1 has won, 2 if player 2 has won, 0 if no winners
 int Verwaltung::siegUeberpruefen() const
 {
     int horizonteleBedingung = 0;
@@ -528,11 +538,13 @@ int Verwaltung::siegUeberpruefen() const
     return 0;
 }
 
+//returns player 1 instance
 Spieler *Verwaltung::getSpieler1() const
 {
     return m_spieler1;
 }
 
+//returns player 2 instance
 Spieler *Verwaltung::getSpieler2() const
 {
     return m_spieler2;
