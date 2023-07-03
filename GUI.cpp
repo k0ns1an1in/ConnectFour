@@ -10,6 +10,11 @@ GUI::GUI(int *neuesFeld)
 //prints the board
 void GUI::spielfeldDrucken() const
 {
+    for(int i = 0;i < 7;i++)
+    {
+        cout << blue << i << "   ";
+    }
+    cout << endl;
     for(int y = 5;y >= 0;y--)
     {
         for(int x = 0;x < 7;x++)
