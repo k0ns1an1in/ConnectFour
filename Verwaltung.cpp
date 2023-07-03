@@ -161,10 +161,10 @@ int Verwaltung::vollUeberpruefen() const
     return check;
 }
 
-//executes given amount of games and prints the percentage of wins without GUI
+//executes given amount of games and prints the percentage of wins without any GUI
 void Verwaltung::spielenTest(int anzahlSpiele)
 {
-    int oscillator = 0;
+    int zugSpieler2 = 0;
     int spielZaehler = 0;
     double spieler1counter = 0;
     double spieler2counter = 0;
@@ -176,9 +176,11 @@ void Verwaltung::spielenTest(int anzahlSpiele)
         }
         while (this->siegUeberpruefen() == 0)
         {
-            if (!oscillator) {
+            if (!zugSpieler2)
+            {
                 int spalte = this->getSpieler1()->zug_spalte();
-                while (m_spielfeld[spalte + 35] != 0) {
+                while (m_spielfeld[spalte + 35] != 0)
+                {
                     spalte = this->getSpieler1()->zug_spalte();
                 }
                 this->spielsteinEinfuegen(spalte, 1);
@@ -189,19 +191,23 @@ void Verwaltung::spielenTest(int anzahlSpiele)
                         m_spielfeld[i] = 0;
                     }
                 }
-                oscillator = !oscillator;
-            } else if (oscillator) {
+                zugSpieler2 = !zugSpieler2;
+            } else if (zugSpieler2)
+            {
                 int spalte = this->getSpieler2()->zug_spalte();
-                while (m_spielfeld[spalte + 35] != 0) {
+                while (m_spielfeld[spalte + 35] != 0)
+                {
                     spalte = this->getSpieler2()->zug_spalte();
                 }
                 this->spielsteinEinfuegen(spalte, 2);
-                if (vollUeberpruefen()) {
-                    for (int i = 0; i < 42; i++) {
+                if (vollUeberpruefen())
+                {
+                    for (int i = 0; i < 42; i++)
+                    {
                         m_spielfeld[i] = 0;
                     }
                 }
-                oscillator = !oscillator;
+                zugSpieler2 = !zugSpieler2;
             }
         }
         if(siegUeberpruefen() == 1)
@@ -231,19 +237,19 @@ GUI Verwaltung::getGui() const
 //executes one game with GUI
 int Verwaltung::spielen()
 {
-    int oscillator = 0;
-    cout << "-----------SPIEL BEGINNT----------" << endl;
+    int zugSpieler2 = 0;
+    cout << "-------SPIEL BEGINNT------" << endl;
     this->getGui().spielfeldDrucken();
     while (this->siegUeberpruefen() == 0)
     {
-        if (!oscillator)
+        if (!zugSpieler2)
         {
             cout << "Spieler 1 am Zug" << endl;
             int spalte = this->getSpieler1()->zug_spalte();
             while(m_spielfeld[spalte+35] != 0)
             {
-                spalte = this->getSpieler1()->zug_spalte();
                 cout << "Fehler, Spalte voll!" << endl;
+                spalte = this->getSpieler1()->zug_spalte();
             }
             this->spielsteinEinfuegen(spalte, 1);
             if(vollUeberpruefen())
@@ -253,17 +259,17 @@ int Verwaltung::spielen()
                     m_spielfeld[i] = 0;
                 }
             }
-            oscillator = !oscillator;
+            zugSpieler2 = !zugSpieler2;
             sleep(1);
         }
-        else if (oscillator)
+        else if (zugSpieler2)
         {
             cout << "Spieler 2 am Zug" << endl;
             int spalte = this->getSpieler2()->zug_spalte();
             while(m_spielfeld[spalte+35] != 0)
             {
-                spalte = this->getSpieler2()->zug_spalte();
                 cout << "Fehler, Spalte voll!" << endl;
+                spalte = this->getSpieler2()->zug_spalte();
             }
             this->spielsteinEinfuegen(spalte, 2);
             if(vollUeberpruefen())
@@ -273,12 +279,12 @@ int Verwaltung::spielen()
                     m_spielfeld[i] = 0;
                 }
             }
-            oscillator = !oscillator;
+            zugSpieler2 = !zugSpieler2;
             sleep(1);
         }
         this->getGui().spielfeldDrucken();
     }
-    cout << "Spieler " << !oscillator + 1 << " hat gewonnen!" << endl;
+    cout << "Spieler " << !zugSpieler2 + 1 << " hat gewonnen!" << endl;
     return siegUeberpruefen();
 }
 
@@ -515,17 +521,17 @@ int Verwaltung::diagonalerSiegUeberpruefen() const
 //executes all win-checks --> returns 1 if player 1 has won, 2 if player 2 has won, 0 if no winners
 int Verwaltung::siegUeberpruefen() const
 {
-    int horizonteleBedingung = 0;
+    int horizontaleBedingung = 0;
     int vertikaleBedingung = 0;
     int diagonaleBedingung = 0;
 
-    horizonteleBedingung = horizontalerSiegUeberpruefen();
+    horizontaleBedingung = horizontalerSiegUeberpruefen();
     vertikaleBedingung = vertikalerSiegUeberpruefen();
     diagonaleBedingung = diagonalerSiegUeberpruefen();
 
-    if (horizonteleBedingung != 0)
+    if (horizontaleBedingung != 0)
     {
-        return horizonteleBedingung;
+        return horizontaleBedingung;
     }
     if (vertikaleBedingung != 0)
     {

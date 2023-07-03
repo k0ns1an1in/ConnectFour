@@ -387,6 +387,7 @@ int SchlauerBot::zug_spalte()
             counterGegnerSteine = 0;
         }
     }
+
     //sonst random:
     {
         std::random_device dev;
