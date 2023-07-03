@@ -254,7 +254,7 @@ int Verwaltung::spielen()
         {
             cout << "Spieler 1 am Zug" << endl;
             int spalte = this->getSpieler1()->zug_spalte();
-            while(m_spielfeld[spalte+35] != 0)
+            while(m_spielfeld[spalte + 35] != 0)
             {
                 cout << "Fehler, Spalte voll!" << endl;
                 spalte = this->getSpieler1()->zug_spalte();
@@ -273,7 +273,7 @@ int Verwaltung::spielen()
         {
             cout << "Spieler 2 am Zug" << endl;
             int spalte = this->getSpieler2()->zug_spalte();
-            while(m_spielfeld[spalte+35] != 0)
+            while(m_spielfeld[spalte + 35] != 0)
             {
                 cout << "Fehler, Spalte voll!" << endl;
                 spalte = this->getSpieler2()->zug_spalte();

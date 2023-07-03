@@ -2,6 +2,7 @@
 
 #include "Spieler.hpp"
 #include <iostream>
+#include <locale.h>
 
 class Mensch : public Spieler
 {

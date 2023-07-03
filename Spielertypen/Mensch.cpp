@@ -12,7 +12,6 @@ int Mensch::zug_spalte()
         cout << "Bitte geben Sie eine Spalte ein: ";
         cin >> spalte;
         cout << endl;
-        // todo hardcode zeilen
         if (spalte >= 0 && spalte <= 6)
         {
             return spalte;
