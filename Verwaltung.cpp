@@ -225,10 +225,14 @@ void Verwaltung::spielenTest(int anzahlSpiele)
     }
     if(spieler1counter > spieler2counter)
     {
-        cout << "Spieler1 ist Gesamtsieger mit " << (spieler1counter/anzahlSpiele) * 100 << "% Siegesquote" << endl;
+        cout    << "Spieler1 ist Gesamtsieger mit "
+                << blue << (spieler1counter/anzahlSpiele) * 100 << "%"
+                << white << " Siegesquote" << endl;
     }else
     {
-        cout << "Spieler2 ist Gesamtsieger mit " << (spieler2counter/anzahlSpiele) * 100 << "% Siegesquote" << endl;
+        cout    << "Spieler2 ist Gesamtsieger mit "
+                << blue << (spieler2counter/anzahlSpiele) * 100 << "%"
+                << white << " Siegesquote" << endl;
     }
 }
 
