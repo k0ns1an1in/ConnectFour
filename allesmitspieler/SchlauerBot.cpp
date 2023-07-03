@@ -11,7 +11,7 @@ SchlauerBot::SchlauerBot(int *feld, int spielernummer)
 //returns the wanted column
 int SchlauerBot::zug_spalte()
 {
-    //neuer algo: ~90.5% Siegquote gegen random
+    // ~90.5% Siegquote gegen random bei 100.000 Spielen
     int counterEigeneSteine = 0;
     int counterGegnerSteine = 0;
 
