@@ -14,7 +14,25 @@ void GUI::spielfeldDrucken() const
     {
         for(int x = 0;x < 7;x++)
         {
-            cout << *(x + m_spielfeld + 7*y) << " | ";
+            switch(*(x + m_spielfeld + 7*y))
+            {
+                case 0:
+                {
+                    cout << white << 0;
+                    break;
+                }
+                case 1:
+                {
+                    cout << red << 1;
+                    break;
+                }
+                case 2:
+                {
+                    cout << yellow << 2;
+                    break;
+                }
+            }
+            cout << white << " | ";
         }
         cout << endl;
     }
