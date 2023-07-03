@@ -158,55 +158,55 @@
 		},
 		{
 			"backtrace" : 1,
-			"path" : "allesmitspieler/Spieler.hpp",
+			"path" : "Spielertypen/Spieler.hpp",
 			"sourceGroupIndex" : 1
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "allesmitspieler/Spieler.cpp",
+			"path" : "Spielertypen/Spieler.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "allesmitspieler/VertikalerBot.cpp",
+			"path" : "Spielertypen/VertikalerBot.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "allesmitspieler/Bots.cpp",
+			"path" : "Spielertypen/Bots.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "allesmitspieler/Mensch.cpp",
+			"path" : "Spielertypen/Mensch.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "allesmitspieler/SchlauerBot.cpp",
+			"path" : "Spielertypen/SchlauerBot.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "allesmitspieler/test.cpp",
+			"path" : "Spielertypen/test.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "allesmitspieler/ZufallsBot.cpp",
+			"path" : "Spielertypen/ZufallsBot.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
 			"backtrace" : 1,
 			"compileGroupIndex" : 0,
-			"path" : "allesmitspieler/HorizontalerBot.cpp",
+			"path" : "Spielertypen/HorizontalerBot.cpp",
 			"sourceGroupIndex" : 0
 		},
 		{
