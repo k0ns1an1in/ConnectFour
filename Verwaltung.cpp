@@ -1,3 +1,7 @@
+#pragma clang diagnostic push
+#pragma ide diagnostic ignored "modernize-loop-convert"
+#pragma ide diagnostic ignored "hicpp-multiway-paths-covered"
+
 #include <unistd.h>
 #include "Verwaltung.h"
 using namespace std;
@@ -260,7 +264,6 @@ int Verwaltung::spielen()
                 }
             }
             zugSpieler2 = !zugSpieler2;
-            sleep(1);
         }
         else if (zugSpieler2)
         {
@@ -280,7 +283,6 @@ int Verwaltung::spielen()
                 }
             }
             zugSpieler2 = !zugSpieler2;
-            sleep(1);
         }
         this->getGui().spielfeldDrucken();
     }
@@ -555,3 +557,4 @@ Spieler *Verwaltung::getSpieler2() const
 {
     return m_spieler2;
 }
+#pragma clang diagnostic pop
