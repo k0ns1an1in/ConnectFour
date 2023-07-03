@@ -1,4 +1,4 @@
-ich denke, dass das Feld mit den Indizes wie folgt aufgebaut wird:
+
      0   1   2   3   4   5   6
      ___________________________
 5  |  35  36  37  38  39  40  41
@@ -9,21 +9,19 @@ ich denke, dass das Feld mit den Indizes wie folgt aufgebaut wird:
 0  |  0   1   2   3   4   5   6
 
 Vertikaler Bot:
-schaut von links nach rechts nach der Spalte mit der größten Höhe:
--Beginn 0|0 => geht so hoch es geht => speichert spaltennummer und maxhöhe, wenn nicht schon max erreicht
--Next Step (spaltennummer+1)|maxhöhe => geht hier hoch, bis max erreicht => ist es sofort leer maxhöhe gleich, sonst neue maxhöhe
-
-feld = aabbccdd
-*feld = vorlaeufigemaxhoehe 
+legt Stein in die höchste belegte mögliche Spalte
 
 Horizontaler Bot:
-schaut von links nach rechts nach der Spalte mit der geringsten Höhe:
--Beginn 0|0 => ist es nicht 0 weiter nach rechts 
-=> bis 0, dann aus i spalte returnen
+legt Stein in die niedrigste belegte mögliche Spalte
 
-Schaluer Bot:
-vier in einer Reihe für den Gegner nciht machen 
-vier in einer Reihe für einen selbst suchen
-random sonst
+Schlauer Bot:
+wenn Sieg möglich --> gewinnen
+wenn Niederlage möglich --> verhindern
+sonst zufällig
 
+Zufallsbot:
+immer zufällig
+
+Mensch:
+menschlicher Spieler
 

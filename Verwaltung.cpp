@@ -561,4 +561,5 @@ Spieler *Verwaltung::getSpieler2() const
 {
     return m_spieler2;
 }
+
 #pragma clang diagnostic pop
