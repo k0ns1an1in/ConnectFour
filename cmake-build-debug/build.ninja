@@ -55,17 +55,17 @@ build CMakeFiles/ConnectFour.dir/main.cpp.obj: CXX_COMPILER__ConnectFour_Debug C
   OBJECT_DIR = CMakeFiles\ConnectFour.dir
   OBJECT_FILE_DIR = CMakeFiles\ConnectFour.dir
 
-build CMakeFiles/ConnectFour.dir/GUI.cpp.obj: CXX_COMPILER__ConnectFour_Debug C$:/ConnectFour/GUI.cpp || cmake_object_order_depends_target_ConnectFour
-  DEP_FILE = CMakeFiles\ConnectFour.dir\GUI.cpp.obj.d
+build CMakeFiles/ConnectFour.dir/Graphics/GUI.cpp.obj: CXX_COMPILER__ConnectFour_Debug C$:/ConnectFour/Graphics/GUI.cpp || cmake_object_order_depends_target_ConnectFour
+  DEP_FILE = CMakeFiles\ConnectFour.dir\Graphics\GUI.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++23
   OBJECT_DIR = CMakeFiles\ConnectFour.dir
-  OBJECT_FILE_DIR = CMakeFiles\ConnectFour.dir
+  OBJECT_FILE_DIR = CMakeFiles\ConnectFour.dir\Graphics
 
-build CMakeFiles/ConnectFour.dir/Verwaltung.cpp.obj: CXX_COMPILER__ConnectFour_Debug C$:/ConnectFour/Verwaltung.cpp || cmake_object_order_depends_target_ConnectFour
-  DEP_FILE = CMakeFiles\ConnectFour.dir\Verwaltung.cpp.obj.d
+build CMakeFiles/ConnectFour.dir/Verwaltung/Verwaltung.cpp.obj: CXX_COMPILER__ConnectFour_Debug C$:/ConnectFour/Verwaltung/Verwaltung.cpp || cmake_object_order_depends_target_ConnectFour
+  DEP_FILE = CMakeFiles\ConnectFour.dir\Verwaltung\Verwaltung.cpp.obj.d
   FLAGS = -g -fdiagnostics-color=always -std=gnu++23
   OBJECT_DIR = CMakeFiles\ConnectFour.dir
-  OBJECT_FILE_DIR = CMakeFiles\ConnectFour.dir
+  OBJECT_FILE_DIR = CMakeFiles\ConnectFour.dir\Verwaltung
 
 build CMakeFiles/ConnectFour.dir/Spielertypen/Spieler.cpp.obj: CXX_COMPILER__ConnectFour_Debug C$:/ConnectFour/Spielertypen/Spieler.cpp || cmake_object_order_depends_target_ConnectFour
   DEP_FILE = CMakeFiles\ConnectFour.dir\Spielertypen\Spieler.cpp.obj.d
@@ -123,7 +123,7 @@ build CMakeFiles/ConnectFour.dir/Spielertypen/HorizontalerBot.cpp.obj: CXX_COMPI
 #############################################
 # Link the executable ConnectFour.exe
 
-build ConnectFour.exe: CXX_EXECUTABLE_LINKER__ConnectFour_Debug CMakeFiles/ConnectFour.dir/main.cpp.obj CMakeFiles/ConnectFour.dir/GUI.cpp.obj CMakeFiles/ConnectFour.dir/Verwaltung.cpp.obj CMakeFiles/ConnectFour.dir/Spielertypen/Spieler.cpp.obj CMakeFiles/ConnectFour.dir/Spielertypen/VertikalerBot.cpp.obj CMakeFiles/ConnectFour.dir/Spielertypen/Bots.cpp.obj CMakeFiles/ConnectFour.dir/Spielertypen/Mensch.cpp.obj CMakeFiles/ConnectFour.dir/Spielertypen/SchlauerBot.cpp.obj CMakeFiles/ConnectFour.dir/Spielertypen/test.cpp.obj CMakeFiles/ConnectFour.dir/Spielertypen/ZufallsBot.cpp.obj CMakeFiles/ConnectFour.dir/Spielertypen/HorizontalerBot.cpp.obj
+build ConnectFour.exe: CXX_EXECUTABLE_LINKER__ConnectFour_Debug CMakeFiles/ConnectFour.dir/main.cpp.obj CMakeFiles/ConnectFour.dir/Graphics/GUI.cpp.obj CMakeFiles/ConnectFour.dir/Verwaltung/Verwaltung.cpp.obj CMakeFiles/ConnectFour.dir/Spielertypen/Spieler.cpp.obj CMakeFiles/ConnectFour.dir/Spielertypen/VertikalerBot.cpp.obj CMakeFiles/ConnectFour.dir/Spielertypen/Bots.cpp.obj CMakeFiles/ConnectFour.dir/Spielertypen/Mensch.cpp.obj CMakeFiles/ConnectFour.dir/Spielertypen/SchlauerBot.cpp.obj CMakeFiles/ConnectFour.dir/Spielertypen/test.cpp.obj CMakeFiles/ConnectFour.dir/Spielertypen/ZufallsBot.cpp.obj CMakeFiles/ConnectFour.dir/Spielertypen/HorizontalerBot.cpp.obj
   FLAGS = -g
   LINK_LIBRARIES = -lkernel32 -luser32 -lgdi32 -lwinspool -lshell32 -lole32 -loleaut32 -luuid -lcomdlg32 -ladvapi32
   OBJECT_DIR = CMakeFiles\ConnectFour.dir

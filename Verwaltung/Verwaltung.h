@@ -1,12 +1,12 @@
 #pragma once
-#include "GUI.h"
+#include "../Graphics/GUI.h"
 #include <iostream>
-#include "Spielertypen/Spieler.hpp"
-#include "Spielertypen/VertikalerBot.hpp"   //1
-#include "Spielertypen/HorizontalerBot.hpp" //2
-#include "Spielertypen/Mensch.hpp"          //3
-#include "Spielertypen/ZufallsBot.hpp"      //4
-#include "Spielertypen/SchlauerBot.hpp"     //5
+#include "../Spielertypen/Spieler.hpp"
+#include "../Spielertypen/VertikalerBot.hpp"   //1
+#include "../Spielertypen/HorizontalerBot.hpp" //2
+#include "../Spielertypen/Mensch.hpp"          //3
+#include "../Spielertypen/ZufallsBot.hpp"      //4
+#include "../Spielertypen/SchlauerBot.hpp"     //5
 
 class Verwaltung
 {
